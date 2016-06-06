@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements
     private void initView() {
         mTabHost = (FragmentStateTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
-
+        mTabHost.getTabWidget().setDividerDrawable(null);
         MainTabEnum[] tabs = MainTabEnum.values();
         final int size = tabs.length;
         for (int i = 0; i < size; i++) {
