@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/main_tab_content"
@@ -13,12 +13,13 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@android:color/black" />
+        android:background="#dddddd" />
 
     <com.lany.fragmenttabhost.FragmentStateTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
 
         <FrameLayout
             android:id="@android:id/tabcontent"
