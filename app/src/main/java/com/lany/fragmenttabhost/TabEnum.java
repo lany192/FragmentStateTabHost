@@ -3,11 +3,7 @@ package com.lany.fragmenttabhost;
 public enum TabEnum {
     HOME("首页", R.drawable.tab_home, HomeFragment.class),
 
-    TWEET("分类", R.drawable.tab_icon_tweet, BBFragment.class),
-
-    SEARCH("搜索", R.drawable.tab_icon_new, CCFragment.class),
-
-    EXPLORE("特选", R.drawable.tab_icon_explore, DDFragment.class),
+    TWEET("分类", R.drawable.tab_cate, CateFragment.class),
 
     MY("我的", R.drawable.tab_my, MyFragment.class);
 
