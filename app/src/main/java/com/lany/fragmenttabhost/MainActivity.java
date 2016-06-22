@@ -24,19 +24,19 @@ public class MainActivity extends AppCompatActivity implements
 
     private void initView() {
         mTabHost = (FragmentStateTabHost) findViewById(android.R.id.tabhost);
-        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.main_tab_content);
         mTabHost.getTabWidget().setDividerDrawable(null);
-        MainTabEnum[] tabs = MainTabEnum.values();
+        TabEnum[] tabs = TabEnum.values();
         final int size = tabs.length;
         for (int i = 0; i < size; i++) {
-            MainTabEnum mainTab = tabs[i];
-            TabSpec tab = mTabHost.newTabSpec(mainTab.getMenuName());
+            TabEnum item = tabs[i];
+            TabSpec tab = mTabHost.newTabSpec(item.getName());
             View indicator = LayoutInflater.from(this).inflate(
                     R.layout.tab_indicator, null);
             TextView title = (TextView) indicator.findViewById(R.id.main_tab_title);
             ImageView logo = (ImageView) indicator.findViewById(R.id.main_tab_logo);
-            logo.setBackgroundResource(mainTab.getMenuIcon());
-            title.setText(mainTab.getMenuName());
+            logo.setBackgroundResource(item.getIcon());
+            title.setText(item.getName());
             tab.setIndicator(indicator);
             tab.setContent(new TabContentFactory() {
 
@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity implements
                     return new View(MainActivity.this);
                 }
             });
-            mTabHost.addTab(tab, mainTab.getClz(), null);
-
-            // 为了监听再次点击菜单，非必须
+            mTabHost.addTab(tab, item.getClz(), null);
             mTabHost.getTabWidget().getChildAt(i).setOnTouchListener(this);
         }
     }
@@ -55,12 +53,8 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         boolean consumed = false;
-        // use getTabHost().getCurrentTabView to decide if the current tab is
-        // touched again
         if (event.getAction() == MotionEvent.ACTION_DOWN
                 && v.equals(mTabHost.getCurrentTabView())) {
-            // use getTabHost().getCurrentView() to get a handle to the view
-            // which is displayed in the tab - and to get this views context
             Fragment currentFragment = getCurrentFragment();
             if (currentFragment != null
                     && currentFragment instanceof OnTabReselectListener) {

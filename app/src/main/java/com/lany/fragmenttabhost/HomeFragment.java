@@ -7,13 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class AAFragment extends Fragment implements OnTabReselectListener {
+/**
+ * 首页
+ */
+public class HomeFragment extends Fragment implements OnTabReselectListener {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		Toast.makeText(getActivity(), "AAqqqqq", Toast.LENGTH_SHORT).show();
-		return inflater.inflate(R.layout.fragment_1, null);
+		return inflater.inflate(R.layout.fragment_home, null);
 	}
 
 	@Override

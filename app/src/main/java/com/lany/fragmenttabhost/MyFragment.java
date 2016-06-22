@@ -7,13 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class EEFragment extends Fragment implements OnTabReselectListener {
+public class MyFragment extends Fragment implements OnTabReselectListener {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		return inflater.inflate(R.layout.fragment_5, null);
+		return inflater.inflate(R.layout.fragment_my, null);
 	}
 
 	@Override
