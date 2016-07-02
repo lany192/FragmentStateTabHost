@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-/**
- * 首页
- */
 public class HomeFragment extends Fragment implements OnTabReselectListener {
 
 	@Override

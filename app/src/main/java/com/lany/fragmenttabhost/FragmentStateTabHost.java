@@ -19,9 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
-/**
- * 自定义保持状态的FragmentTabHost
- */
 public final class FragmentStateTabHost extends TabHost implements
         TabHost.OnTabChangeListener {
     private final ArrayList<TabInfo> mTabs = new ArrayList<>();
