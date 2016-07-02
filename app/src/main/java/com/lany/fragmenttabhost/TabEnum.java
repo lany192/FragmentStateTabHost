@@ -1,11 +1,11 @@
 package com.lany.fragmenttabhost;
 
 public enum TabEnum {
-    HOME("首页", R.drawable.tab_home, HomeFragment.class),
+    HOME("Home", R.drawable.tab_home, HomeFragment.class),
 
-    TWEET("分类", R.drawable.tab_cate, CateFragment.class),
+    TWEET("Category", R.drawable.tab_cate, CateFragment.class),
 
-    MY("我的", R.drawable.tab_my, MyFragment.class);
+    MY("My", R.drawable.tab_my, MyFragment.class);
 
     private String name;
     private int icon;

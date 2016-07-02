@@ -20,6 +20,6 @@ public class HomeFragment extends Fragment implements OnTabReselectListener {
 
 	@Override
 	public void onTabReselect() {
-		Toast.makeText(getActivity(), "AA", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "HomeFragment", Toast.LENGTH_SHORT).show();
 	}
 }

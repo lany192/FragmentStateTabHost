@@ -18,6 +18,6 @@ public class CateFragment extends Fragment implements OnTabReselectListener {
 
 	@Override
 	public void onTabReselect() {
-		Toast.makeText(getActivity(), "BB", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "CateFragment", Toast.LENGTH_SHORT).show();
 	}
 }

@@ -18,7 +18,7 @@ public class MyFragment extends Fragment implements OnTabReselectListener {
 
 	@Override
 	public void onTabReselect() {
-		Toast.makeText(getActivity(), "EE", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "MyFragment", Toast.LENGTH_SHORT).show();
 	}
 
 }
